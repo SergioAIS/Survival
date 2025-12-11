@@ -13,6 +13,15 @@ switch (type)
 	case "dmg":
 		draw_set_color(c_red)
 	break;
+	
+	case "key":
+		draw_set_color(c_yellow);
+	break;
+	
+	case "cure":
+		draw_set_color(c_lime);
+	break;
 }
+
 
 draw_text(x, y, value)

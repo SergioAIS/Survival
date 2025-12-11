@@ -1,15 +1,18 @@
-//Stats
-hp = 30
-dmg = 5
 
-range = 350
-speed_max = 4
+// stats -----------------
 
+hp = 20;
+dmg = 5;
 
-//Control
-invi = 0
-invi_max = 30
-active = 0
-dir_mov = -1
+speed_max = 4; 
+range = 350;
 
-image_speed = 0
+// control ---------------
+
+invi = 0;
+invi_max = 30;
+
+active = 0;
+dir_mov = -1;
+
+image_speed = 0;
