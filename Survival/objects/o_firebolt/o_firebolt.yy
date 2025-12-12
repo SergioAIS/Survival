@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_firebolt",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_firebolt",
+    "path": "sprites/s_firebolt/s_firebolt.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

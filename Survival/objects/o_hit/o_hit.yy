@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_hit",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_hit",
+    "path": "sprites/s_hit/s_hit.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

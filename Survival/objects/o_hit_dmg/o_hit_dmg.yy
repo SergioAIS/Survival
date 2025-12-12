@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_hit_dmg",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_hit_dmg",
+    "path": "sprites/s_hit_dmg/s_hit_dmg.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

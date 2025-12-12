@@ -1,7 +1,7 @@
 
 // Stats -----------------------------
 
-hp_max = 50;
+hp_max = 500;
 hp = hp_max;
 
 keys= 0;
@@ -36,3 +36,12 @@ ori = 270;
 dead = 0;
 invi = 0;
 invi_max = 60;
+
+// Identificación
+player_id = 0;   // 0 = P1, 1 = P2
+gamepad_slot = -1; // -1 = Teclado. Si detectamos mando, guardaremos aquí el ID (ej. 0 o 4)
+
+// Inventario para ciclado (Necesario para el mando)
+// Asumo que "axe" y "fire" son los strings que usas en scr_change_weapon
+weapons_list = ["axe", "fire"]; 
+current_weapon_index = 0;

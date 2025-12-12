@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_pow_fire",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_fire_scroll",
+    "path": "sprites/s_fire_scroll/s_fire_scroll.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
