@@ -1,1 +1,0 @@
-player_id = 1; // Este será el del mando

@@ -1,38 +1,30 @@
+// 1. Dibujamos la fogata (IMPORTANTE: Si no pones esto, la fogata se vuelve invisible)
 draw_self();
-draw_set_font(f_text)
-// Barra de vida de la fogata
-if (hp < hp_max)
+
+// 2. BARRA DE VIDA (Estilo "Live Bar")
+// Configuración
+var _bar_width = 60;  // Ancho de la barra en pixeles
+var _bar_height = 8;  // Alto de la barra
+var _x_offset = x - (_bar_width / 2); // Centrar en X
+var _y_offset = y - 50; // Altura (50 pixeles arriba del origen)
+
+// Calcular porcentaje de vida (0 a 1)
+var _hp_percent = hp / hp_max;
+
+// Dibujar Fondo (Caja Negra / Borde)
+draw_set_color(c_black);
+draw_rectangle(_x_offset - 2, _y_offset - 2, _x_offset + _bar_width + 2, _y_offset + _bar_height + 2, false);
+
+// Dibujar Vida Roja (Fondo de daño)
+draw_set_color(c_maroon); // Rojo oscuro
+draw_rectangle(_x_offset, _y_offset, _x_offset + _bar_width, _y_offset + _bar_height, false);
+
+// Dibujar Vida Verde (Vida actual)
+if (hp > 0)
 {
-	var _pc = (hp / hp_max) * 100;
-	draw_healthbar(x-20, y-50, x+20, y-45, _pc, c_black, c_red, c_lime, 0, true, true);
+	draw_set_color(c_lime); // Verde brillante
+	draw_rectangle(_x_offset, _y_offset, _x_offset + (_bar_width * _hp_percent), _y_offset + _bar_height, false);
 }
 
-// Menú
-if (menu_active)
-{
-	draw_set_halign(fa_center);
-	draw_set_valign(fa_middle);
-	
-	// Fondo semitransparente para leer mejor
-	draw_set_color(c_black);
-	draw_set_alpha(0.8);
-	draw_rectangle(x-70, y-140, x+70, y-60, false);
-	draw_set_alpha(1);
-	
-	// Opciones
-	for (var i = 0; i < array_length(menu_options); i++)
-	{
-		var _col = c_white;
-		var _txt = menu_options[i][0];
-		
-		if (i == menu_index) {
-			_col = c_yellow;
-			_txt = "> " + _txt + " <";
-		}
-		
-		// Si no alcanza el dinero y no es la opción "Cerrar" (costo 0)
-		if (menu_options[i][1] > global.money) _col = c_gray;
-		
-		draw_text_color(x, y-130 + (i * 20), _txt, _col, _col, _col, _col, 1);
-	}
-}
+// Resetear color (Buena práctica)
+draw_set_color(c_white);

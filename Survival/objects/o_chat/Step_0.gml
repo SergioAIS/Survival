@@ -1,5 +1,5 @@
 
-if(keyboard_check_pressed(vk_space))
+if(keyboard_check_pressed(vk_space) or gamepad_button_check_pressed(4, gp_face2))
 {
 	if(!ds_queue_empty(global.list_chat))
 	{

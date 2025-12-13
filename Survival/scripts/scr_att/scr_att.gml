@@ -2,38 +2,76 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_att(){
 	
-	// Reiniciamos la animación del golpe
-	image_index = 0;
-
-	var _inst; // Variable temporal para guardar el objeto creado
-
-	switch (weapon)
+	var _inst = noone;
+	
+	switch(weapon)
 	{
 		case "axe":
+			image_index = 0;
 			_inst = instance_create_depth(x, y, depth, o_axe);
+			
+			// AHORA el script configura el hacha (porque el Create del hacha está vacío)
+			with(_inst)
+			{
+				dmg = 20;
+				
+				// Usamos other.ori (la orientación del Player 1)
+				switch(other.ori)
+				{
+					case 0: 
+						// Derecha: Valores por defecto
+						image_angle = 0; 
+						image_xscale = 1;
+					break;
+					
+					case 90: // Arriba
+						image_angle = 270; 
+						image_xscale = -1; 
+					break;
+					
+					case 180: // Izquierda
+						image_angle = 0;
+						image_xscale = -1; 
+					break;
+					
+					case 270: // Abajo
+						image_angle = 90; 
+						image_xscale = -1; 
+					break;
+				}
+			}
 		break;
 		
 		case "fire":
+			image_index = 0;
 			_inst = instance_create_depth(x, y, depth - 10, o_firebolt);
-			_inst.speed = 8; // Aseguramos velocidad
+			
+			with(_inst)
+			{
+				dmg = 10;
+				image_xscale = 0.85; 
+				image_yscale = 0.85;
+				
+				switch(other.ori)
+				{
+					case 0: hspeed = 7; break;
+					
+					case 90: 
+						image_angle = 90; 
+						vspeed = -7; 
+					break;
+					
+					case 180: 
+						hspeed = -7; 
+						image_xscale = -0.85; // Invertimos la escala original
+					break;
+					
+					case 270: 
+						image_angle = 270; 
+						vspeed = 7; 
+					break;
+				}
+			}
 		break;
-	}
-	
-	// --- FIX OBLIGATORIO PARA 2 JUGADORES ---
-	// Como ahora hay 2 players, le decimos al objeto: "Toma MI dirección, no la del otro"
-	if (instance_exists(_inst))
-	{
-		_inst.owner = id;      // "Yo te creé"
-		_inst.direction = ori; // "Ve hacia allá"
-		_inst.image_angle = ori;
-		
-		// CORRECCIÓN VISUAL: Si miras a la izquierda (180), usamos espejo en vez de rotación
-		// para que el dibujo no quede "patas arriba".
-		if (ori == 180) {
-			_inst.image_angle = 0;
-			_inst.image_xscale = -1;
-		} else {
-			_inst.image_xscale = 1;
-		}
 	}
 }

@@ -16,10 +16,12 @@ gpu_set_blendmode(bm_subtract);
 
 // ... (Todo tu código de luces sigue igual aquí: with(o_player)... etc) ...
 with(o_player) draw_sprite_ext(s_light,0,x,y,5,5,0,c_white,1);
+with(o_player2) draw_sprite_ext(s_light,0,x,y,5,5,0,c_white,1);
 with(o_att) draw_sprite_ext(s_light,0,x,y,2,2,0,c_white,1);
 with(o_enemy_body) draw_sprite_ext(s_light,0,x,y,3,3,0,c_white,1);
 //with(o_pot) draw_sprite_ext(s_light,0,x,y,2,2,0,c_white,1);
 with(o_float_text) draw_sprite_ext(s_light,0,x,y,2,2,0,c_white,1);
+with(o_fogata) draw_sprite_ext(s_light,0,x,y,10,10,0,c_white,1);
 
 gpu_set_blendmode(bm_normal);
 
