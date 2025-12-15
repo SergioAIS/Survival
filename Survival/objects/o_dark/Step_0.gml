@@ -44,7 +44,7 @@ else
 var _logic_day_start = 6 / 24;  // 0.25
 var _logic_day_end   = 18 / 24; // 0.75
 
-if (time >= _logic_day_start && time < _logic_day_end)
+if (time >= _logic_day_start and time < _logic_day_end)
 {
     global.is_day = true;
 }

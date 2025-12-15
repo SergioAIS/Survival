@@ -13,7 +13,7 @@ function scr_att_p2()
 	{
 		case "axe":
 			image_index = 0;
-			_inst = instance_create_depth(x, y, depth, o_axe);
+			_inst = instance_create_depth(x, y, depth, o_axeG);
 			
 			with(_inst)
 			{
@@ -32,6 +32,44 @@ function scr_att_p2()
 		case "fire":
 			image_index = 0;
 			_inst = instance_create_depth(x, y, depth - 10, o_firebolt);
+			
+			with(_inst)
+			{
+				dmg = 10;
+				image_xscale = 0.85; image_yscale = 0.85;
+				
+				// Reseteamos velocidades para evitar contaminación de lógica anterior
+				hspeed = 0; vspeed = 0;
+				
+				switch(_att_ori)
+				{
+					case 0: // Derecha
+						hspeed = 7; 
+						image_angle = 0;
+					break;
+					
+					case 90: // Arriba
+						vspeed = -7; 
+						image_angle = 90; 
+					break;
+					
+					case 180: // Izquierda
+						hspeed = -7; 
+						image_xscale *= -1; // Espejo
+						image_angle = 0;
+					break;
+					
+					case 270: // Abajo
+						vspeed = 7; 
+						image_angle = 270; 
+					break;
+				}
+			}
+		break;
+		
+		case "ice":
+			image_index = 0;
+			_inst = instance_create_depth(x, y, depth - 10, o_icebolt);
 			
 			with(_inst)
 			{

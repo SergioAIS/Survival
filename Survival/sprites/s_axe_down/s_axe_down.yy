@@ -82,7 +82,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Attack",
-    "path": "folders/Sprites/Player/Attack.yy",
+    "name": "Axe Normal",
+    "path": "folders/Sprites/Player/Attack/Axe Normal.yy",
   },
 }

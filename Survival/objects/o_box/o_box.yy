@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_box",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_box",
+    "path": "sprites/s_box/s_box.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

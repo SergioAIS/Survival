@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_fogata",
   "spriteId": {
-    "name": "s_trans",
-    "path": "sprites/s_trans/s_trans.yy",
+    "name": "s_firebolt",
+    "path": "sprites/s_firebolt/s_firebolt.yy",
   },
   "solid": false,
   "visible": true,

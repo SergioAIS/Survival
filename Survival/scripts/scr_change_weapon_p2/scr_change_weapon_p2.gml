@@ -8,9 +8,9 @@ function scr_change_weapon_p2(_new_weapon)
 	switch(_new_weapon)
 	{
 		case "axe":
-			s_att_right = s_axe_right;
-			s_att_up    = s_axe_up;
-			s_att_down  = s_axe_down;
+			s_att_right = s_axeG_right;
+			s_att_up    = s_axeG_up;
+			s_att_down  = s_axeG_down;
 		break;
 		
 		case "fire":
@@ -18,5 +18,11 @@ function scr_change_weapon_p2(_new_weapon)
 			s_att_up    = s_use_up;
 			s_att_down  = s_use_down;
 		break;		
+		
+		case "ice":
+            s_att_right = s_use_right;
+            s_att_up = s_use_up;
+            s_att_down = s_use_down;
+        break;
 	}
 }

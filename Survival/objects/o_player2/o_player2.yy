@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": true,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_players",
+    "path": "objects/o_players/o_players.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

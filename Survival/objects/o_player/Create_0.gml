@@ -16,6 +16,7 @@ s_att_down = noone;
 
 pick_axe = 0;
 pick_fire = 0;
+pick_ice = 0
 
 // Movimiento ------------------------
 

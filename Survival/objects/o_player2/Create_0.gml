@@ -15,7 +15,7 @@ keys = 0;
 att = 0;
 weapon = "";
 s_att_up = noone; s_att_right = noone; s_att_down = noone;
-pick_axe = 0; pick_fire = 0;
+pick_axe = 0; pick_fire = 0; pick_ice = 0;
 
 move = 1;
 dir_mov = -1;

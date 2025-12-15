@@ -28,6 +28,7 @@ if(move)
 
 	if(keyboard_check_pressed(ord("1")) and pick_axe) scr_change_weapon("axe");
 	if(keyboard_check_pressed(ord("2")) and pick_fire) scr_change_weapon("fire");
+	if(keyboard_check_pressed(ord("3")) and pick_ice) scr_change_weapon("ice");
 	
 	//Atacks -----------------------------
 

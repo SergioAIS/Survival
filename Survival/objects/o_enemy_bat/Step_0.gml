@@ -2,6 +2,15 @@
 event_inherited();
 
 // Behaviour -----------------------
+if (ice)
+{
+	speed_max = 2.5
+	alarm[0] = 180
+}
+else
+{
+	speed_max = 4
+}
 
 if(!active)
 {

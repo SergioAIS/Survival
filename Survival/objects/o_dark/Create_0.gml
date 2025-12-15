@@ -2,7 +2,7 @@ surf = surface_create(room_width, room_height);
 
 // --- CONFIGURACIÓN DE TIEMPO ---
 seconds_per_cycle = 210; // 3.5 Minutos reales = 24 Horas en el juego
-time = 0; // 0.0 = 00:00, 0.5 = 12:00, 1.0 = 24:00
+time = 0.5; // 0.0 = 00:00, 0.5 = 12:00, 1.0 = 24:00
 
 // --- COLORES ---
 color_night = merge_color(c_black, c_navy, 0.35); // Noche profunda

@@ -21,12 +21,17 @@ function scr_input_p2()
 	}
 	
 	// CAMBIO DE ARMA
-	if (gamepad_button_check_pressed(gamepad_slot, gp_shoulderr))
+	if (gamepad_button_check_pressed(gamepad_slot, gp_padu))
 	{
 		if (pick_axe) scr_change_weapon_p2("axe");
 	}
-	if (gamepad_button_check_pressed(gamepad_slot, gp_shoulderl))
+	if (gamepad_button_check_pressed(gamepad_slot, gp_padl))
 	{
 		if (pick_fire) scr_change_weapon_p2("fire");
+	}
+	
+	if (gamepad_button_check_pressed(gamepad_slot, gp_padd))
+	{
+		if (pick_fire) scr_change_weapon_p2("ice");
 	}
 }

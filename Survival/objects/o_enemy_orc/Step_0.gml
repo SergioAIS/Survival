@@ -1,6 +1,13 @@
 
 event_inherited();
 
+if (ice)
+{
+	speed_max = 1.5
+	alarm[3] = 180
+}
+else speed_max = 3
+
 if(move)
 {
 	move_contact_solid(dir_mov,speed_max);

@@ -16,6 +16,8 @@ dir_mov = -1;
 invi = 0;
 invi_max = 30;
 
+ice = 0
+
 is_hit = 0;
 hit_time = 15;
 

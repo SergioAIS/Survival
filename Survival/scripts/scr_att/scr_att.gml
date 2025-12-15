@@ -73,5 +73,37 @@ function scr_att(){
 				}
 			}
 		break;
+		
+		case "ice":
+			image_index = 0;
+			_inst = instance_create_depth(x, y, depth - 10, o_icebolt);
+			
+			with(_inst)
+			{
+				dmg = 10;
+				image_xscale = 0.85; 
+				image_yscale = 0.85;
+				
+				switch(other.ori)
+				{
+					case 0: hspeed = 7; break;
+					
+					case 90: 
+						image_angle = 90; 
+						vspeed = -7; 
+					break;
+					
+					case 180: 
+						hspeed = -7; 
+						image_xscale = -0.85; // Invertimos la escala original
+					break;
+					
+					case 270: 
+						image_angle = 270; 
+						vspeed = 7; 
+					break;
+				}
+			}
+		break;
 	}
 }

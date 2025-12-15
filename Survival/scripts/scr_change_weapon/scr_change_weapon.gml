@@ -16,6 +16,13 @@ function scr_change_weapon(argument0){
             s_att_right = s_use_right;
             s_att_up = s_use_up;
             s_att_down = s_use_down;
-        break;      
+        break;  
+		
+		case "ice":
+            weapon = "ice";
+            s_att_right = s_use_right;
+            s_att_up = s_use_up;
+            s_att_down = s_use_down;
+        break;
     }
 }

@@ -1,34 +1,26 @@
-// --- CREATE EVENT de o_control ---
+// --- ASIGNACIÓN DE MANDO (JUGADOR 2) ---
 
-// Buscamos en todos los slots posibles (del 0 al 11)
+// Buscamos si hay algún mando conectado (Slots 0 a 11)
 var _slot_encontrado = -1;
 
 for (var i = 0; i < 12; i++)
 {
-    if (gamepad_is_connected(i))
-    {
-        _slot_encontrado = i; // ¡Encontramos el 4!
-        break; // Dejamos de buscar
-    }
+	if (gamepad_is_connected(i))
+	{
+		_slot_encontrado = i;
+		show_debug_message("Mando encontrado en Slot: " + string(i));
+		break; // Nos quedamos con el primero que encontremos
+	}
 }
 
-// Si encontramos un mando, se lo asignamos al Jugador
-if (_slot_encontrado != -1)
+// Si encontramos uno y el Player 2 existe, se lo asignamos
+if (_slot_encontrado != -1 and instance_exists(o_player2))
 {
-    // CASO A: ¿Quieres que el mando controle al Jugador 2?
-    with (o_player)
-    {
-        if (player_id == 1) // Solo al que tenga ID 1
-        {
-            gamepad_slot = _slot_encontrado;
-            show_debug_message("Mando Slot " + string(_slot_encontrado) + " asignado al P2");
-        }
-    }
-    
-    // CASO B: (Opcional) Si quieres probar con 1 solo jugador usando mando:
-    /*
-    with (o_player) {
-        gamepad_slot = _slot_encontrado;
-    }
-    */
+	o_player2.gamepad_slot = _slot_encontrado;
+	
+	// También actualizamos su máscara de interacción para que el botón funcione
+	if (instance_exists(o_player2.my_mask))
+	{
+		o_player2.my_mask.gamepad_slot = _slot_encontrado;
+	}
 }
