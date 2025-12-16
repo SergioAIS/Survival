@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_skeleton",
+  "name": "o_enemy_skeleton",
   "spriteId": {
-    "name": "s_skeleton_right",
-    "path": "sprites/s_skeleton_right/s_skeleton_right.yy",
+    "name": "s_skeleton_down",
+    "path": "sprites/s_skeleton_down/s_skeleton_down.yy",
   },
   "solid": false,
   "visible": true,

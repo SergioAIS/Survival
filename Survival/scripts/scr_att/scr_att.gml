@@ -44,7 +44,7 @@ function scr_att(){
 		case "fire":
 			image_index = 0;
 			_inst = instance_create_depth(x, y, depth - 10, o_firebolt);
-			audio_play_sound(snd_iceball,1,0)
+			audio_play_sound(snd_fireball,1,0)
 			with(_inst)
 			{
 				image_xscale = 0.85; 
