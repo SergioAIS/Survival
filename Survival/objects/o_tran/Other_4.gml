@@ -6,20 +6,20 @@ if (target == global.previous_room)
 	switch (ori)
 	{
 		case 0:
-			o_players.x += 96
+			o_players.x += 150
 			
 		break;
 		
 		case 90:
-			o_players.y -= 96
+			o_players.y -= 150
 		break;
 		
 		case 180:
-			o_players.x -= 96
+			o_players.x -= 150
 		break;
 		
 		case 270:
-			o_players.y += 96
+			o_players.y += 150
 		break;
 	}
 }

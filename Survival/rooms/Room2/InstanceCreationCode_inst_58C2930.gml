@@ -1,3 +1,3 @@
-target = Room3
+target = Room4
 
 ori = 180

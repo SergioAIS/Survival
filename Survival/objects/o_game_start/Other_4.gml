@@ -14,10 +14,9 @@ global.force_night_return = false;
 
 // Usaremos un Struct para saber cuáles tenemos
 global.keys = {
-    red: false,
+    red: true,
     blue: false,
-    green: false,
-    gold: false
+    green: false
 };
 
 // Y un contador si quieres mostrar "Llaves: 2" en el HUD, 

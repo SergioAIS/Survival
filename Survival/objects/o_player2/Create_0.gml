@@ -1,11 +1,10 @@
 // --- MANDO ---
 gamepad_slot = 4; // Por defecto PS4 suele ser 4. Si es Xbox es 0.
-// Puedes poner un código aquí para buscarlo si quieres.
 
 // --- INTERACCIÓN ---
-// Creamos SU máscara propia y guardamos su ID
-my_mask = instance_create_depth(x, y, depth, o_inter_mask_p2);
-my_mask.gamepad_slot = gamepad_slot; // Le pasamos el ID del mando
+// YA NO LA CREAMOS AQUÍ. Asumimos que o_inter_mask_p2 está en la room.
+// Solo le pasamos el ID del mando para que sepa con cual interactuar.
+o_inter_mask_p2.gamepad_slot = gamepad_slot;
 
 // --- STATS (Igual al P1) ---
 hp_max = 50;

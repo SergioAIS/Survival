@@ -6,7 +6,7 @@
     "name": "s_post",
     "path": "sprites/s_post/s_post.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

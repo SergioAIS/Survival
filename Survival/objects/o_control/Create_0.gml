@@ -17,10 +17,4 @@ for (var i = 0; i < 12; i++)
 if (_slot_encontrado != -1 and instance_exists(o_player2))
 {
 	o_player2.gamepad_slot = _slot_encontrado;
-	
-	// También actualizamos su máscara de interacción para que el botón funcione
-	if (instance_exists(o_player2.my_mask))
-	{
-		o_player2.my_mask.gamepad_slot = _slot_encontrado;
-	}
 }
