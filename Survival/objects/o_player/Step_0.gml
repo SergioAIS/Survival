@@ -176,4 +176,5 @@ else
 	image_alpha = 1;
 }
 
+
 depth = - (y+20);

@@ -9,12 +9,11 @@ function scr_att(){
 		case "axe":
 			image_index = 0;
 			_inst = instance_create_depth(x, y, depth, o_axe);
-			
+			audio_play_sound(snd_axe_1, 1, 0)
 			// AHORA el script configura el hacha (porque el Create del hacha está vacío)
 			with(_inst)
 			{
-				dmg = 20;
-				
+				dmg = other.axe_dmg;
 				// Usamos other.ori (la orientación del Player 1)
 				switch(other.ori)
 				{
@@ -45,10 +44,9 @@ function scr_att(){
 		case "fire":
 			image_index = 0;
 			_inst = instance_create_depth(x, y, depth - 10, o_firebolt);
-			
+			audio_play_sound(snd_iceball,1,0)
 			with(_inst)
 			{
-				dmg = 10;
 				image_xscale = 0.85; 
 				image_yscale = 0.85;
 				
@@ -77,10 +75,9 @@ function scr_att(){
 		case "ice":
 			image_index = 0;
 			_inst = instance_create_depth(x, y, depth - 10, o_icebolt);
-			
+			audio_play_sound(snd_iceball,1,0)
 			with(_inst)
 			{
-				dmg = 10;
 				image_xscale = 0.85; 
 				image_yscale = 0.85;
 				

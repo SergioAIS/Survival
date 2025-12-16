@@ -20,3 +20,5 @@ view_h = camera_get_view_height(view_camera[0]);
 gamepad_slot = 4; // Ajusta a 0 o 4 según tu config
 menu_cooldown = 10; // Pequeña espera para no seleccionar al instante
 stick_pushed = false;
+
+audio_play_sound(snd_pause,1,0)

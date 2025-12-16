@@ -9,6 +9,7 @@ keys= 0;
 
 att = 0;
 weapon = "";
+axe_dmg = 20
 
 s_att_up = noone;
 s_att_right = noone;

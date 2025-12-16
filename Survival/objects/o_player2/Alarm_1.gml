@@ -1,13 +1,22 @@
-/// @description Respawn
+/// @description Respawn 
 
-room_goto(global.respawn_room);
-global.previous_room = global.respawn_room;
+if (instance_exists(o_respawn))
+{
+    // 1. TELETRANSPORTE
+    x = o_respawn.x + 32; // Aparece a la DERECHA de la fogata <--- CAMBIO
+    y = o_respawn.y;
 
-// RESET STATS --------------
-
-hp = hp_max;
-invi = 0;
-move = 1;
-dead = 0;
-visible = 1;
-//ds_list_clear(global.list_used);
+    // 2. RESET STATS
+    hp = hp_max;
+    invi = 120;
+    move = 1;
+    dead = 0;
+    visible = 1;
+    
+    sprite_index = s_stand_down;
+    image_alpha = 1;
+}
+else
+{
+    room_restart();
+}

@@ -14,10 +14,10 @@ function scr_att_p2()
 		case "axe":
 			image_index = 0;
 			_inst = instance_create_depth(x, y, depth, o_axeG);
-			
+			audio_play_sound(snd_axe_2, 1, 0)
 			with(_inst)
 			{
-				dmg = 20;
+				dmg = other.axe_dmg;
 				// Usamos la nueva variable _att_ori
 				switch(_att_ori)
 				{
@@ -32,10 +32,9 @@ function scr_att_p2()
 		case "fire":
 			image_index = 0;
 			_inst = instance_create_depth(x, y, depth - 10, o_firebolt);
-			
+			audio_play_sound(snd_iceball,1,0)
 			with(_inst)
 			{
-				dmg = 10;
 				image_xscale = 0.85; image_yscale = 0.85;
 				
 				// Reseteamos velocidades para evitar contaminación de lógica anterior
@@ -70,10 +69,9 @@ function scr_att_p2()
 		case "ice":
 			image_index = 0;
 			_inst = instance_create_depth(x, y, depth - 10, o_icebolt);
-			
+			audio_play_sound(snd_iceball,1,0)
 			with(_inst)
 			{
-				dmg = 10;
 				image_xscale = 0.85; image_yscale = 0.85;
 				
 				// Reseteamos velocidades para evitar contaminación de lógica anterior

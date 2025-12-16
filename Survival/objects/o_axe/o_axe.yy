@@ -7,7 +7,7 @@
     "path": "sprites/s_axe_mask/s_axe_mask.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

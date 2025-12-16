@@ -1,0 +1,1 @@
+text1 = "Cuidado con donde entras"

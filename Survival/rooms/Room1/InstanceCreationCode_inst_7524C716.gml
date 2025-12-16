@@ -1,0 +1,1 @@
+text1 = "Una vez empiezas no hay vuelta atrás"

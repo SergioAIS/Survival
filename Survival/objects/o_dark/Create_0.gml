@@ -1,16 +1,16 @@
 surf = surface_create(room_width, room_height);
 
 // --- CONFIGURACIÓN DE TIEMPO ---
-seconds_per_cycle = 210; // 3.5 Minutos reales = 24 Horas en el juego
-time = 0.5; // 0.0 = 00:00, 0.5 = 12:00, 1.0 = 24:00
+seconds_per_cycle = 100; // 3.5 min
+time = 0.3; // Empezamos en la mañana (0.3)
 
 // --- COLORES ---
-color_night = merge_color(c_black, c_navy, 0.35); // Noche profunda
-color_sunset = merge_color(c_black, c_orange, 0.4); // Atardecer
+color_night = merge_color(c_black, c_navy, 0.35); 
+color_sunset = merge_color(c_black, c_orange, 0.4); 
 
 // Variables de dibujo
-current_alpha = 0.95;
-current_color = color_night;
+current_alpha = 0;
+current_color = c_white;
 
-// Variable lógica (para spawners, tiendas, etc.)
-global.is_day = false;
+// Variable lógica
+global.is_day = true;

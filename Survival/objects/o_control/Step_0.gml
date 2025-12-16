@@ -17,7 +17,7 @@ if (instance_exists(o_player2))
 
 // 2. Activar Pausa
 // Solo si se aprieta el botón Y no está pausado ya (no existe o_pause)
-if ((_pause_keyboard || _pause_gamepad) && !instance_exists(o_pause))
+if ((_pause_keyboard || _pause_gamepad) and !instance_exists(o_pause))
 {
 	// Creamos el objeto de pausa en una profundidad muy alta (encima de todo)
 	// Asegúrate de que las coordenadas 0,0 estén dentro de la vista o usa la cámara

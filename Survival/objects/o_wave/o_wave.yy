@@ -8,7 +8,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_wave_manager",
+    "path": "objects/o_wave_manager/o_wave_manager.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

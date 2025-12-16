@@ -44,12 +44,13 @@ if (_up) {
 }
 
 // Seleccionar
-if (_select && menu_cooldown == 0)
+if (_select and menu_cooldown == 0)
 {
 	switch(menu_index)
 	{
 		case 0: // CONTINUAR
 			instance_destroy(); // Al destruirse, reactiva todo (ver evento Destroy)
+			audio_play_sound(snd_unpause,1,0)
 		break;
 		
 		case 1: // SALIR
