@@ -1,4 +1,3 @@
-
+money = choose(o_coin_bronz, o_coin_plat, o_coin_gold)
 instance_create_depth(x,y,depth-300,o_blood);
-
-instance_create_layer(x, y, "Instances", o_money)
+instance_create_layer(x, y, "Instances", money)

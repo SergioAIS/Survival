@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_money",
-  "spriteId": {
-    "name": "s_key",
-    "path": "sprites/s_key/s_key.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,

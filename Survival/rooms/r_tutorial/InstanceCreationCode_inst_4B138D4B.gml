@@ -1,0 +1,1 @@
+text = "Puedes interactuar con distintos \nobjetos con la tecla Espacio"

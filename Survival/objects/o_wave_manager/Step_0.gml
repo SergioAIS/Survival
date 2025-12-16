@@ -5,6 +5,52 @@ if (!instance_exists(o_fogata)) exit;
 // 2. SOLO SPAWNEAR SI ES DE NOCHE
 if (global.is_day == false)
 {
+	// --- LÓGICA DE JEFE (PORTADOR) ---
+    // Solo si NO ha salido hoy todavía
+    if (boss_spawned_today == false)
+    {
+        var _boss_type = noone;
+        var _key_color = "";
+        var _key_id = 0;
+
+        // DEFINIR CALENDARIO DE LLAVES
+        if (global.day_count == 3) { // DÍA 3: LLAVE ROJA
+            _boss_type = o_enemy_bearer; 
+            _key_color = "red";
+            _key_id = 0;
+        }
+        else if (global.day_count == 6) { // DÍA 6: LLAVE AZUL
+            _boss_type = o_enemy_bearer; // Podría ser otro objeto o_slime_boss
+            _key_color = "blue";
+            _key_id = 1;
+        }
+        
+        // SI TOCA JEFE HOY, CREARLO
+        if (_boss_type != noone)
+        {
+            // Posición aleatoria lejos
+            var _ang = random(360);
+            var _bx = o_fogata.x + lengthdir_x(spawn_radius, _ang);
+            var _by = o_fogata.y + lengthdir_y(spawn_radius, _ang);
+            
+            // Crear Boss
+            var _inst = instance_create_layer(_bx, _by, "Instances", _boss_type);
+            
+            // Configurar qué llave trae
+            _inst.key_to_drop = _key_color;
+            _inst.key_sprite_id = _key_id;
+            
+            // Marcar que ya salió para que no salgan infinitos jefes esta noche
+            boss_spawned_today = true;
+            
+            show_debug_message("¡BOSS SPAWNED! Key: " + _key_color);
+        }
+        else
+        {
+            // Si hoy no toca jefe, marcamos true para dejar de preguntar
+            boss_spawned_today = true; 
+        }
+    }
 	spawn_timer--;
 	
 	if (spawn_timer <= 0)
@@ -56,6 +102,9 @@ if (global.is_day == false)
 }
 else
 {
-	// Resetear timer durante el día
-	spawn_timer = 120;
+	// ES DE DÍA
+    spawn_timer = 120;
+    
+    // IMPORTANTE: Reseteamos la bandera del jefe para la próxima noche
+    boss_spawned_today = false;
 }

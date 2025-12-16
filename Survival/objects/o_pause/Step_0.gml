@@ -5,6 +5,7 @@ var _up = false;
 var _down = false;
 var _select = false;
 
+
 // 1. Teclado
 if (keyboard_check_pressed(vk_up)) _up = true;
 if (keyboard_check_pressed(vk_down)) _down = true;

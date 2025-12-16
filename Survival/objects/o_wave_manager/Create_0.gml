@@ -38,3 +38,6 @@ default_wave = {
 	rate: 50, 
 	types: [o_enemy_bat, o_enemy_orc, o_enemy_skeleton] 
 };
+
+// Bandera para saber si ya spawneamos al jefe de hoy
+boss_spawned_today = false;

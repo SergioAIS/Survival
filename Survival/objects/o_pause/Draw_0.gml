@@ -15,7 +15,7 @@ draw_set_color(c_white);
 // 3. DIBUJAR TEXTO DEL MENÚ
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-// draw_set_font(f_tu_fuente); // Descomenta y pon tu fuente aquí
+draw_set_font(f_menu); // Descomenta y pon tu fuente aquí
 
 var _center_x = camera_x + (view_w / 2);
 var _center_y = camera_y + (view_h / 2);

@@ -11,3 +11,14 @@ global.game_started = false; // El juego empieza "apagado"
 global.weapons_found = 0;    // Contador de armas recogidas
 global.day_count = 1;        // Día 1
 global.force_night_return = false;
+
+// Usaremos un Struct para saber cuáles tenemos
+global.keys = {
+    red: false,
+    blue: false,
+    green: false,
+    gold: false
+};
+
+// Y un contador si quieres mostrar "Llaves: 2" en el HUD, 
+// pero para abrir puertas usaremos el struct.

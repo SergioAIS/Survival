@@ -30,7 +30,7 @@ draw_sprite_ext(s_fondo_texto, 0, _box_x, _box_y, _scale, _scale, 0, c_white, 1)
 
 
 // --- 4. DIBUJAR TEXTO (COORDINADO) ---
-draw_set_font(f_text);
+draw_set_font(f_menu);
 draw_set_halign(fa_left);
 
 // Calculamos la posición del texto basándonos en la posición de la caja

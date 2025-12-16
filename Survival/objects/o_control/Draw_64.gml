@@ -37,15 +37,17 @@ if (instance_exists(o_dark))
     draw_text(_center_x, 30, _time_txt);
 }
 
-// ========================================================
-// --- 5. DINERO (CENTRO ABAJO DEL RELOJ) ---
-// ========================================================
-// Este va fuera del "if (o_dark)" para verse siempre
+if (room != r_tutorial)
+{
+	// ========================================================
+	// --- 5. DINERO (CENTRO ABAJO DEL RELOJ) ---
+	// ========================================================
+	// Este va fuera del "if (o_dark)" para verse siempre
 
-draw_set_halign(fa_center);
-draw_set_color(c_white);
-draw_text(_center_x, 55, "$ " + string(global.money));
-
+	draw_set_halign(fa_center);
+	draw_set_color(c_white);
+	draw_text(_center_x, 55, "$ " + string(global.money));
+}
 // ========================================================
 // --- 6. DEBUG (ESQUINA INFERIOR) ---
 // ========================================================

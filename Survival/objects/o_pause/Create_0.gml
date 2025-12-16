@@ -22,3 +22,6 @@ menu_cooldown = 10; // Pequeña espera para no seleccionar al instante
 stick_pushed = false;
 
 audio_play_sound(snd_pause,1,0)
+
+// Variable de seguridad
+can_pause_timer = 30; // 30 frames = 0.5 segundos de espera

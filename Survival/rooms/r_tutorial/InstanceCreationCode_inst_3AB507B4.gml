@@ -1,0 +1,1 @@
+text = "Prueba a moverte con \nel joystick izquierdo"

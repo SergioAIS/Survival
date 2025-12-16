@@ -2,8 +2,11 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_door_key",
-  "spriteId": null,
-  "solid": false,
+  "spriteId": {
+    "name": "s_door_key",
+    "path": "sprites/s_door_key/s_door_key.yy",
+  },
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

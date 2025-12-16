@@ -1,7 +1,7 @@
 surf = surface_create(room_width, room_height);
 
 // --- CONFIGURACIÓN DE TIEMPO ---
-seconds_per_cycle = 100; // 3.5 min
+seconds_per_cycle = 30; // 3.5 min
 time = 0.3; // Empezamos en la mañana (0.3)
 
 // --- COLORES ---
